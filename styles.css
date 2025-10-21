@@ -1,44 +1,233 @@
-:root{
-    
+:root {
+  /* Colors */
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
 
---Light-red: hsl(0, 100%, 67%)
---Orangey-yellow: hsl(39, 100%, 56%)
---Green-teal: hsl(166, 100%, 37%)
---Cobalt-blue: hsl(234, 85%, 45%)
+  /* Gradients / background colors */
+  --bg-light-slate-blue: hsl(252, 100%, 67%);
+  --bg-light-royal-blue: hsl(241, 81%, 54%);
 
-## Gradients
+  /* Circle stops (use as needed in gradients) */
+  --circle-violet-blue: hsla(256, 72%, 46%, 1);
+  --circle-persian-blue: hsla(241, 72%, 46%, 0);
 
---Light-slate-blue: (background): hsl(252, 100%, 67%)
---Light-royal-blue: (background): hsl(241, 81%, 54%)
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 11%, 35%);
+  --light-blue: hsl(224, 94%, 87%);
 
---Violet-blue: (circle): hsla(256, 72%, 46%, 1)
---Persian-blue: (circle): hsla(241, 72%, 46%, 0)
-
-
-### Neutral
-
---White: hsl(0, 0%, 100%)
---Pale-blue: hsl(221, 100%, 96%)
---Light-lavender: hsl(241, 100%, 89%)
---Dark-gray-blue: hsl(224, 30%, 27%)
-
-# Typography
---Font-family: 'Hanken Grotesk', sans-serif
---Font-size-base: 18px;
---Font-weight-light: 400;
---Font-weight-medium: 700;
---Font-weight-bold: 900; 
+  /* Typography */
+  --font-family: "Hanken Grotesk", sans-serif;
+  --font-size-base: 18px;
+  --font-weight-light: 500;
+  --font-weight-medium: 700;
+  --font-weight-bold: 800;
+  --font-color-light: hsl(254, 45%, 83%);
+  --font-color-gray-light: hsla(223, 3%, 47%, 0.616);
 }
-
-.container {
-  display: flex;
-  flex-direction: row;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  background-color: var(--pale-blue);
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  align-content: center;
+}
+.section {
+  display: grid;
+  grid-template-columns: 280px 280px; 
+  grid-template-rows: 380px;
+  gap: 0;
+  box-shadow: 0px 5px 25px 0px var(--light-blue);
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+}
+.result-section,
+.summary-section {
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.result-section {
+  grid-column: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 25px 25px 25px 25px;
+  font-family: var(--font-family);
+  color: var(--white);
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-light-slate-blue),
+    var(--bg-light-royal-blue)
+  );
+}
+.result-header {
+  font-size: 1.2rem;
+  color: var(--font-color-light);
+  font-weight: var(--font-weight-medium);
+  padding-bottom: 1.5rem;
+}
+.result-circle {
+  width: 9rem;
+  height: 9rem;
+  align-content: center;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    var(--circle-persian-blue),
+    var(--circle-violet-blue)
+  );
+}
+.result-number {
+  font-size: 3.5rem;
+  color: var(--white);
+}
+.result-of-100 {
+  font-size: 0.7rem;
+  color: var(--font-color-light);
+  font-weight: var(--font-weight-light);
+}
+.result-great-text {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-light);
+}
+.result-botton-text {
+  font-size: 0.8rem;
+  color: var(--font-color-light);
+  font-weight: var(--font-weight-light);
+  padding: 0.4rem;
+}
+.summary-section {
+  list-style: none;
+  grid-column: 2;
+  align-content: start;
+  border-radius: 0 25px 25px 0;
+  font-family: var(--font-family);
+  color: var(--dark-gray-blue);
+  background-color: var(--white);
+  z-index: 2;
+}
+.summary-title {
+  margin: 0;
+  padding: 1.8rem 1.8rem 1rem;
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-medium);
+}
+/* Lista completa */
+.summary-ul {
+  padding: 0;
+  margin-top: 0;
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+}
+/* Cada categoria */
+.summary-item {
+  height: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  border-radius: 10px;
+  gap: 10px;
+  align-content: space-between;
+}
+.item-details {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+}
+.item-icon {
+  width: 20px;
+  height: 20px;
+  align-self: center;
+}
+.item-category {
+  align-self: center;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+}
+.item-score {
+  align-self: center;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-medium);
+}
+.max-score {
+  color: var(--font-color-gray-light);
+  font-weight: var(--font-weight-medium);
+  margin-left: 6px;
+}
+.button-continue {
+  margin-left: 1.8rem;
+  margin-right: 1.8rem;
+  padding: .8rem 5rem;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  align-self: center;
+}
+.button-continue:hover {
+  background-color: var(--bg-light-royal-blue);
+}
+.attribution {
+ margin: 50px;
+  font-size: 10px;
+  color: var(--dark-gray-blue);
+  font-family: var(--font-family);
+  text-align: center;
+   background-color: var(--pale-blue);
 
 }
-.container.result-section {
-  background: var(--Violet-blue);
-  
+/* Responsive design */
+@media (max-width: 375px) {
+    body {
+    padding: 0; 
+    margin: 0; 
+    background-color: var(--white);
+    align-content: flex-start;
+  }
+  .section {
+    grid-template-columns: 1fr;
+    border-radius: 0px 0px 0px 0px;
+    align-content: start;
+    box-shadow: none;
+    height:auto;
+  }
+  .result-section {
+    grid-column: 1;
+    border-radius: 0px 0px 25px 25px;
+  }
+  .result-circle {
+    aspect-ratio: 1/1;
+  }
+  .summary-section {
+    grid-column: 1;
+    margin:0;
+  }
+  .button-continue {
+    padding: .8rem 8rem;
+  }
+  .attribution {
+    bottom:10px;
+    background-color: var(--white);
+  }
 }

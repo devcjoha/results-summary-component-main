@@ -21,13 +21,13 @@ async function loadSumaryData() {
 function generatelistItems(data) {
     //Mapear los datos para crear elementos de lista
     const listData = data.map(item => {
-        return `<li class="summary-item">
-            <div class="item-icon" style="background-color: ${item.color}33;">
+        return `<li class="summary-item" style="background-color: ${item.colorLight};">
+            <div class="item-icon">
                 <img src="${item.icon}" alt="${item.category} icon" />
             </div>
             <div class="item-details">
-                <span class="item-category">${item.category}</span>
-                <span class="item-score"><strong>${item.score}</strong> / 100</span>
+                <span class="item-category" style="color: ${item.color};" >${item.category} </span>
+                <span class="item-score"><strong>${item.score}</strong><span class="max-score">/ 100</span></span>
             </div>
         </li>`;
     }).join(''); //Unir todos los elementos en una sola cadena
