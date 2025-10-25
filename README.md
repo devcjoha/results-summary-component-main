@@ -30,14 +30,17 @@ Users will be able to:
 - **Bonus**: Use local JSON data to dynamically populate content.
 
 ### Screenshot
+<p align="center">
+  <img src="./assets/images/results-summary-component-desktop.jpg" width="500" alt="vista desktop" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/images/results-summary-component-mobile.jpg" width="300" alt="Vista mobile" />
+</p>
 
-![results-summary-component-desktop](./assets/images/results-summary-component-desktop.jpg)
-![results-summary-component-mobile](./assets/images/results-summary-component-mobile.jpg)
 
 ### Links
 
 - Solution URL: [Code](https://github.com/devcjoha/results-summary-component-main)
-- Website URL: [Deploy] [here](https://results-summary-frontendm.netlify.app/)
+- Website URL: [Deploy] [here](https://results-summary-frontend-joha.netlify.app/)
 
 ## My Process
 As expected, I didn't even remember that I had to finish with [in Javascript], the programs to install, preparing the PC, the keyboard shortcuts. How fun! I dusted off my notebooks, my Notion notes, my old Github account, etc.
@@ -45,12 +48,17 @@ I didn't hesitate for a minute to do the EXTRA challenge, which was appropriate 
 
 ### Created with
 
+<p align="center">
 <img src="./assets/images/html.svg" alt="html" width="50px" />
-<img src="././assets/images/css.svg" alt="html" width="50px" />
-<img src="./assets/images/js.svg" alt="html" width="50px" />
-<img src="./assets/images/netlify.svg" alt="html" width="50px" />
-<img src="./assets/images/github.svg" alt="html" width="50px" />
-
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./assets/images/css.svg" alt="css" width="50px" />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./assets/images/js.svg" alt="svg" width="50px" />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./assets/images/netlify.svg" alt="netlify" width="50px" />
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./assets/images/github.svg" alt="github" width="50px" />
+</p>
 
 ### Continuous Development
 
